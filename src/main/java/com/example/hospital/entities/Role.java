@@ -5,25 +5,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
-public class Patient {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private String nom;
+    private String name;
     
-    @Temporal(TemporalType.DATE)
-    private Date dateNaissance;
-    
-    private boolean malade;
-    
-    private int score;
-    
-    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
-    private Collection<RendezVous> rendezVous;
+    @ManyToMany(mappedBy = "roles", fetch = FetchType.EAGER)
+    private Collection<User> users = new ArrayList<>();
 }
