@@ -140,4 +140,4 @@ L'application expose automatiquement des endpoints REST pour toutes les entités
 - users (Collection)
 
 ## Auteur
-- [Votre Nom]
+- OTMANE SABIRI
