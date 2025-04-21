@@ -138,6 +138,3 @@ L'application expose automatiquement des endpoints REST pour toutes les entités
 - id (Long)
 - name (String)
 - users (Collection)
-
-## Auteur
-- OTMANE SABIRI
